@@ -6,7 +6,7 @@ let apiKey;
 
 // Try to get the API key from config.js (will work locally)
 try {
-  apiKey = CONFIG.API_KEY;
+  apiKey = '187774e2bc818aca26309836cec5f170';
 } catch (e) {
   console.error("Config file not found or API key not set");
   apiKey = ''; // Empty fallback
