@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(70deg, blue, red);
+  min-height: 100vh;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Intro {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 470px;
+  animation: fadeIn 1s ease-in;
+}
+
+.Intro h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  width: 90%;
+  max-width: 470px;
+  background: linear-gradient(135deg, #5500fe, #54898a);
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search button:hover {
+  background: #d4f5ef;
+  transform: scale(1.05);
+}
+
+.search button:active {
+  transform: scale(0.95);
+}
+
+.search button img {
+  width: 16px;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.weather h1 {
+  font-size: 70px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.weather h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.col img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.humidity,
+.wind {
+  font-size: 24px;
+  margin-top: -6px;
+}
+
+.loader {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 5px solid #fff;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+#error-message {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ffcccc;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .card {
+    padding: 25px 20px;
+  }
+
+  .search input {
+    height: 50px;
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .search button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .weather-icon {
+    width: 120px;
+  }
+
+  .weather h1 {
+    font-size: 55px;
+  }
+
+  .weather h2 {
+    font-size: 30px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 20px;
+  }
+
+  .col img {
+    width: 30px;
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  .Intro h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 350px) {
+  .weather h1 {
+    font-size: 45px;
+  }
+
+  .weather h2 {
+    font-size: 25px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 18px;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
