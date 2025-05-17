@@ -1,10 +1,5 @@
-// File: script.js
-// This is your main JavaScript file
 
-// Option 1: For local development with config.js approach
 let apiKey;
-
-// Try to get the API key from config.js (will work locally)
 try {
   apiKey = '187774e2bc818aca26309836cec5f170';
 } catch (e) {
